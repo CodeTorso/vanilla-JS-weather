@@ -3,6 +3,8 @@ const wind = document.getElementById("wind");
 const weather = document.getElementById("weather");
 const precipitation = document.getElementById("precipitation");
 
+const apiKey = "AIzaSyDBAKGzKYMr9VxF8WpzP1t3SoT2KR_dqow";
+
 const weatherCodes = {
   0: "Clear sky",
   1: "Mainly clear",
@@ -62,7 +64,6 @@ function addSearches(searches) {
   let parent = "";
 
   if (searches) {
-    console.log(searches);
     for (let i = 0; i < searches.length; i++) {
       parent += `<div class="searches" onclick="callApi(${
         searches[i].latitude
@@ -98,7 +99,7 @@ function callApi(lat, long) {
 
 function callImgApi(location) {
   let randomPhoto = "";
-
+  const apiKey = "AIzaSyDBAKGzKYMr9VxF8WpzP1t3SoT2KR_dqow";
   const url = "https://places.googleapis.com/v1/places:searchText";
 
   const data = {
@@ -120,15 +121,13 @@ function callImgApi(location) {
     .then((response) => response.json())
     .then((data) => {
       const arr = data.places[0].photos;
-      console.log(arr);
       randomPhoto = arr[Math.floor(Math.random() * arr.length)];
-      console.log(randomPhoto.name);
       getImg(randomPhoto.name);
     });
 }
 
 function getImg(randomPhoto) {
-  const url = `https://places.googleapis.com/v1/${randomPhoto}/media?maxHeightPx=500&maxWidthPx=1300&key=${apiKey}`;
+  const url = `https://places.googleapis.com/v1/${randomPhoto}/media?maxHeightPx=500&maxWidthPx=1300&key=AIzaSyDBAKGzKYMr9VxF8WpzP1t3SoT2KR_dqow`;
   fetch(url)
     .then((res) => {
       if (!res.ok) {
