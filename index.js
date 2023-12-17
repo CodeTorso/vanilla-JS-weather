@@ -100,6 +100,7 @@ function callApi(lat, long) {
 function callImgApi(location) {
   let randomPhoto = "";
   const apiKey = "AIzaSyDBAKGzKYMr9VxF8WpzP1t3SoT2KR_dqow";
+  // hehe 
   const url = "https://places.googleapis.com/v1/places:searchText";
 
   const data = {
