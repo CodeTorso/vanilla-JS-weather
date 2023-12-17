@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Poppins:wght@400;500;600&display=swap");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #c5fff8;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+
+  margin: 0;
+}
+
+form {
+  top: 1%;
+  position: absolute;
+  z-index: 2;
+}
+
+input {
+  background: rgba(252, 252, 252, 0.63);
+
+  min-width: 600px;
+  padding: 0.4rem 1.3rem;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(35, 35, 35);
+
+  border-radius: 25px;
+  border: 2px solid rgb(67, 67, 67);
+}
+
+.input-focus {
+  border-radius: 25px 25px 1px 1px;
+}
+
+#results {
+  display: none;
+  background: rgba(244, 244, 244, 0.63);
+  border-radius: 1px 1px 25px 25px;
+  overflow: auto;
+  height: 24rem;
+  border: 2px solid rgb(67, 67, 67);
+  border-top: 0px;
+}
+
+.hidden {
+  display: block !important;
+}
+
+#results::-webkit-scrollbar {
+  display: none;
+}
+
+#results {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.searches {
+  box-sizing: border-box;
+  width: 100%;
+  height: 3.4rem;
+  margin-top: 0.1rem;
+  background-color: rgba(163, 163, 163, 0.389);
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.3rem;
+}
+
+.search-country-logo {
+  height: 80%;
+}
+
+.address {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  box-sizing: border-box;
+  height: 70vh;
+  width: 70vw;
+  border-radius: 100px;
+  padding: 2% 1%;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 15px solid #00000041;
+}
+
+.content-div {
+  background: #ffffff4b;
+  padding: 1% 2%;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.font-rubik {
+  margin: 0;
+  font-family: "Archivo", sans-serif;
+}
+
+#degree {
+  font-size: 14rem;
+}
+
+.extra-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#weather {
+  font-size: 2rem;
+}
+
+#city-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#bg-city-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+}

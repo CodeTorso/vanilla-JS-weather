@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form onsubmit="event.preventDefault()" action="">
+      <input
+        id="searchText"
+        oninput="callSearcher()"
+        placeholder="Enter city name"
+        type="text"
+      />
+      <div id="results"></div>
+    </form>
+
+    <div id="content">
+      <div class="content-div">
+        <h1 class="font-rubik" id="degree">21°C</h1>
+        <div class="extra-content">
+          <h1 class="font-rubik" id="weather">Clear</h1>
+          <h1 class="font-rubik" id="wind">3.2 km/hr to North</h1>
+          <h1 class="font-rubik" id="precipitation">0%</h1>
+        </div>
+      </div>
+      <img id="city-img" src="" alt="" />
+    </div>
+    <img id="bg-city-img" alt="" />
+
+    <script src="index.js"></script>
+  </body>
+</html>
